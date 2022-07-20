@@ -1,9 +1,11 @@
 public class Main {
     public static void main(String[] args) {
 //        examples1();
-//        examples2();
-//        examples3();
+        examples2();
+        examples3();
         examples4();
+        examples5();
+
 
     }
     private static void examples1(){
@@ -33,20 +35,34 @@ public class Main {
             }
         }
     }
+
     private static void examples4() {
         String a = "ping";
         String b = "pong";
-       for (int i = 1; i < 31; i++) {
-           System.out.println(i + ": " );
-
+        for (int i = 1; i < 31; i++) {
             if (i % 3 == 0) {
-                System.out.println( a);
+                System.out.println( i + ": " + a);
             }
             if (i % 5 == 0) {
-                System.out.println(b);
-            } else if (i % 3 == 0 && i % 5 == 0) {
-                System.out.println(a + "  " + b);
+                System.out.println(i + ": " + b);
+            }if (i % 3 == 0 && i % 5 == 0) {
+                System.out.println(i + ": " + a + "  " + b);
+            }
+            else {
+                System.out.println(i + ": ");
             }
         }
     }
+    private static void examples5() {
+       int a = 0;
+       int b = 1;
+        System.out.print(a + " " + b + " ");
+        for (int i = 3; i < 11; i++) {
+            int c = a + b;
+            System.out.print(c + " ");
+            a = b;
+            b = c;
+        }
     }
+    }
+
